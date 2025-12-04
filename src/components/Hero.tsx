@@ -38,7 +38,7 @@ const Hero = ({ onSearch }: HeroProps) => {
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl pt-16 font-bold tracking-tight leading-tight">
             <span className="block text-foreground" style={{ color: 'hsl(270 15% 10%)' }}>Testing</span>
-            <span className="block text-primary mt-2">Stagin 1</span>
+            <span className="block text-primary mt-2">Stagin 2</span>
           </h1>
   
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
