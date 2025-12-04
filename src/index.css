@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 270 15% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 15% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 15% 10%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 10% 96%;
+    --secondary-foreground: 270 15% 10%;
+
+    --muted: 270 10% 96%;
+    --muted-foreground: 270 8% 45%;
+
+    --accent: 45 90% 60%;
+    --accent-foreground: 270 15% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 10% 90%;
+    --input: 270 10% 90%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens for OGCollege - OG aesthetic */
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58% / 0.15), hsl(45 90% 60% / 0.1));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(270 10% 98%));
+    --shadow-soft: 0 2px 20px -4px hsl(262 83% 58% / 0.1);
+    --shadow-medium: 0 8px 32px -8px hsl(262 83% 58% / 0.15);
+    --shadow-hover: 0 12px 48px -12px hsl(262 83% 58% / 0.25);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 270 15% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 270 15% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 270 15% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 270 15% 15%;
+    --muted-foreground: 270 10% 65%;
+
+    --accent: 45 90% 60%;
+    --accent-foreground: 270 15% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 15% 18%;
+    --input: 270 15% 18%;
+    --ring: 262 83% 58%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58% / 0.2), hsl(45 90% 60% / 0.15));
+    --gradient-card: linear-gradient(180deg, hsl(270 15% 10%), hsl(270 15% 12%));
+    --shadow-soft: 0 2px 20px -4px hsl(262 83% 58% / 0.3);
+    --shadow-medium: 0 8px 32px -8px hsl(262 83% 58% / 0.4);
+    --shadow-hover: 0 12px 48px -12px hsl(262 83% 58% / 0.6);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-hover;
+  }
+}
